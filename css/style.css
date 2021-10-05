@@ -8,6 +8,7 @@
   --secondary-background: #ececec;
   --black-background: #2f303a;
   --blue-background: #2196f3;
+  --icon-fill: #afb1b8;
 }
 
 body {
@@ -26,9 +27,8 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
 li {
@@ -68,8 +68,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  outline: 2px solid green;
 }
 
 .section {
@@ -160,8 +158,14 @@ img {
   justify-content: space-between;
 }
 
+/* .contacts-list {
+  display: flex;
+  align-items: center;
+} */
+
 .contacts-list-item {
-  display: block;
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
@@ -176,6 +180,7 @@ img {
 
 .envelope {
   fill: var(--secondary-text-color);
+  margin-right: 10px;
 }
 
 .contacts-list-item:hover .envelope,
@@ -185,6 +190,7 @@ img {
 
 .smartphone {
   fill: var(--secondary-text-color);
+  margin-right: 10px;
 }
 
 .contacts-list-item:hover .smartphone,
@@ -338,7 +344,7 @@ img {
   line-height: 1.17;
   color: var(--secondary-text-color);
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .our-team-title {
@@ -368,10 +374,11 @@ img {
 .social-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  padding-right: 32px;
-  padding-left: 32px;
+  justify-content: center;
+}
+
+.social-list-item + .social-list-item {
+  margin-left: 10px;
 }
 
 .social-list-link {
@@ -385,7 +392,7 @@ img {
 }
 
 .social-list-icon {
-  fill: #afb1b8;
+  fill: var(--icon-fill);
 }
 
 .social-list-link:hover,
@@ -410,7 +417,7 @@ img {
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-fill);
   border-radius: 4px;
 }
 
@@ -431,17 +438,20 @@ img {
 }
 
 .clients-icon {
-  fill: #afb1b8;
+  fill: var(--icon-fill);
   width: 106px;
   height: 60px;
 }
 /* ==============================footer=============================================== */
 .footer {
-  display: flex;
   background-color: var(--black-background);
   color: var(--black-background-text-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
 }
 
 .logo-link-footer {
@@ -493,7 +503,12 @@ img {
 }
 
 .footer-social-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .footer-social-list-link .footer-social-list-icon {
